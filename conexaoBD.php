@@ -1,11 +1,14 @@
 <?php
-    $servidor = "loscalhost";
-    $dbname = "bd-academico-final";
-    $dbusuario = "root";
-    $dbsenha = "";
-    $conn = mysqli_connect($servidor, $dbusuario, $dbsenha, $dbname);
+$servidor = 'mysql742.umbler.com';
+$usuario = 'mateus';
+$senha = 'kHDH9V44rwJL53M';
+$banco = 'bdacademico';
 
-    if(!$conn){
-        die("conexao falhou: " . mysqli_connect_error($conn));
-    }
+$con = new mysqli($servidor, $usuario, $senha, $banco);
+if ($con->connect_error) {
+die("Connection failed: " . $con->connect_error);
+}else{
+echo "Conectou !!";
+} 
+
 ?>
