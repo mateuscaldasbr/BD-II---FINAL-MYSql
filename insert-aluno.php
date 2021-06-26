@@ -5,12 +5,12 @@
 
         $query = mysqli_query($con, "INSERT INTO Aluno (CPF, nome) VALUE ('$cpf', '$nome')")
     
-        if($query){
+        /*if($query){
             echo 'Cadastro realizado com sucesso';
         }
         else {
             'Deu ruim, não foi possível cadastrar'
-        }
+        }*/
     }
 ?>
 
@@ -26,10 +26,10 @@
             <label>Nome</label><br/>
             <input type="text" name="nome"><br/>
 
-            <select>
+            /*<select>
                 <option>Aluno</option>
                 <option>Professor</option>
-            </select>
+            </select>*/
 
             <br/>
 
