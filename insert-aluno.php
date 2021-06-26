@@ -13,11 +13,11 @@
             <input type="text" name="nome"><br/>
 
             <select>
-                <option>CPF</option>
-                <option>Nome</option>
+                <option>Aluno</option>
+                <option>Professor</option>
             </select>
 
-            <button>Insert</button>
+            <button name="cadastrar">CADASTRAR</button>
         </form>
     </body>
 </html>
