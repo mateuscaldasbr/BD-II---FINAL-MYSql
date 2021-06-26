@@ -12,13 +12,6 @@
         $cpf = $_POST['cpf'];
 
         $query = mysqli_query($con, "INSERT INTO Aluno (CPF, nome) VALUES ('$cpf', '$nome')");
-    
-        if($query){
-            echo 'Cadastro realizado com sucesso'
-        }
-        else {
-            'Deu ruim, não foi possível cadastrar'
-        }
     }
 ?>
 
