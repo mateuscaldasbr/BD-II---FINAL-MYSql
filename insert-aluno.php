@@ -7,11 +7,10 @@ if (isset($_POST['cadastrar'])) {
     $cpf = $_POST['cpf'];
 
     $query = mysqli_query($con, "INSERT INTO Aluno (CPF, nome) VALUES ('$cpf', '$nome')");
-    
-    if ($query){
+
+    if ($query) {
         echo "Sucesso";
-    }
-    else {
+    } else {
         echo "Erro ao inserir os dados";
     }
 }
@@ -24,7 +23,7 @@ if (isset($_POST['cadastrar'])) {
 </head>
 
 <body>
-    <form>
+    <form method="post">
         <label>CPF</label><br />
         <input type="text" name="cpf"><br />
 

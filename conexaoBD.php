@@ -10,3 +10,4 @@ die("Connection failed: " . $con->connect_error);
 }else{
 echo "Connect Success";
 }
+?>
