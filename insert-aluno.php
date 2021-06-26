@@ -1,4 +1,4 @@
-<?php include("conexaoBD.php"); 
+<?php include("conexaoBD.php") 
     if (isset ($_POST['cadastrar'])){
         $nome = $_POST['nome'];
         $cpf = $_POST['cpf'];
