@@ -19,25 +19,23 @@ if (isset($_POST['cadastrar'])) {
 <html>
 
 <head>
-    <title>INSERT ALUNO</title>
+    <title>Insira os dados do aluno</title>
 </head>
 
 <body>
     <form method="post">
-        <label>CPF</label><br />
-        <input type="text" name="cpf"><br />
 
-        <label>Nome</label><br />
-        <input type="text" name="nome"><br />
+        <label>Nome</label> <br/>
+        <input type="text" name="nome"> <br/>
+
+        <label>CPF</label> <br/>
+        <input type="text" name="cpf"> <br/>
 
         <select>
             <option>Aluno</option>
             <option>Professor</option>
-        </select>
-
-        <br />
-
-        <button name="cadastrar">CADASTRAR</button>
+            <option>BETA</option>
+        </select> <button name="cadastrar">CADASTRAR</button>
     </form>
 </body>
 
