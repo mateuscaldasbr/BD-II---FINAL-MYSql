@@ -4,13 +4,14 @@
     $senha = 'kHDH9V44rwJL53M';
     $banco = 'bdacademico';
     
-    $con = mysqli_connect($servidor, $usuario, $senha, $banco);
+    $con = mysqli_connect($servidor, $usuario, $senha, $banco);     
 
-    if (isset ($_POST['cadastrar'])){
+        if (isset ($_POST['cadastrar'])){
+        
         $nome = $_POST['nome'];
         $cpf = $_POST['cpf'];
 
-        $query = mysqli_query($con, "INSERT INTO Aluno (CPF, nome) VALUES ('$cpf', '$nome')")
+        $query = mysqli_query($con, "INSERT INTO Aluno (CPF, nome) VALUES ('$cpf', '$nome')");
     
         if($query){
             echo 'Cadastro realizado com sucesso'
