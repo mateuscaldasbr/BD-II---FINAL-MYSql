@@ -1,82 +1,32 @@
+<?php
+include("connectbd.php");
+?>
+
 <html>
-
-<head>
-
-    <title>SELECT FROM "Alunos"</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-
-</head>
-
+<header>
+    <style>
+        table {border: 1px solid #000;}
+        table td {border: 1px solid #000;}
+    </style>
+</header>
 
 <body>
-
-    <?
-
-    # dados para conexão com o banco de dados
-
-    $servidor = '127.0.0.1';
-
-    $usuario = 'root';
-
-    $senha = '';
-
-    $banco = 'bd-academico';
-
-    # executa a conexão com o MySQL
-
-    $link = mysqli_connect("$servidor", "$usuario", "$senha", "$banco");
-    mysqli_select_db($link, 'test');
-
-    # Cria a expressão sql de consulta aos registros
-
-    $sql = "SELECT * FROM 'Aluno'";
-
-    ?>
-
-    <TABLE border=1>
-        <TR>
-            <TD>Matricula</TD>
-            <TD>CPF</TD>
-            <TD>Nome</TD>
-        </TR>
-
-        <?
-
-        # executa a expressão sql no servidor, e armazena o resultado
-
-        $result = mysqli_query($link, $sql) or die(mysqli_error($link));
-
-
-        while ($tbl = mysqli_fetch_assoc($result)) {
-            $Matricula = $tbl["matricula"];
-
-            $CPF = $tbl["cpf"];
-
-            $Nome = $tbl["nome"];
-
-            echo "<TR>";
-
-            echo "<TD>$Matricula</TD>";
-            echo "<TD>$CPF</TD>";
-            echo "<TD>$Nome</TD>";
-            echo "</TR>";
-        }
-        echo 'A operação foi realizada com sucesso.';
-        ?>
-    </TABLE>
-
-    <center><a href="insert-aluno.php">INSERIR NOVO REGISTRO</a>
-        <p>
-    </center>
-
-    <br /><br />
-
-    <center><a href="visualizarealterar-registro.php">ALTERAR REGISTRO</a></center>
-
-    <br /><br />
-
-    <center><a href="visualizareexcluir-registro.php">EXCLUIR REGISTRO</a></center>
-
+    <table>
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Nome</th>
+                <th>CPF</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>MATEUS CALDAS</td>
+                <td>12345678900</td>
+            </tr>
+        </tbody>
+    </table>
 </body>
 
 </html>
