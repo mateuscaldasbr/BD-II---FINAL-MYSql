@@ -26,16 +26,17 @@
         <tbody>
             <?php
             include("connectbd.php");
-            $resultado = mysqli_query($conn, "SELECT * FROM Aluno");
+            $resultado = mysqli_query($conn, "SELECT * FROM `aluno` ORDER BY `aluno`.`matricula` ASC
+            ");
             while ($linha = mysqli_fetch_array($resultado)) {
             ?>
                 <tr>
                     <td><?php echo $linha['matricula']; ?></td>
                     <td><?php echo $linha['nome']; ?></td>
                     <td><?php echo $linha['CPF']; ?></td>
-                <?php }
-                ?>
+                    <td><a href="?matricula=<?php ?>">Editar</a></td>
                 </tr>
+            <?php } ?>
         </tbody>
     </table>
 </body>
