@@ -1,17 +1,18 @@
 <?php
 include('connectbd.php');
 
-if (isset($_POST['cadastrar'])) {
+if (isset($_POST['atualizar'])) {
 
     $nome = $_POST['nome'];
-    $cpf = $_POST['cpf'];
+    $cpf = $_POST['CPF'];
+    $matricula = $_POST['atualizar'];
 
-    $query = mysqli_query($conn, "INSERT INTO Aluno (CPF, nome) VALUES ('$cpf', '$nome')");
+    $query = mysqli_query($conn, "UPDATE aluno SET nome='$nome', CPF='$cpf' WHERE matricula='$matricula'");
 
     if ($query) {
-        echo "Sucesso";
+        echo "UPDATE Sucesso";
     } else {
-        echo "Erro";
+        echo "UPDATE Erro";
     }
 }
 
@@ -50,7 +51,8 @@ if (isset($_POST['cadastrar'])) {
     <?php }
     }
     ?>
-
+    <left><a href="select-aluno.php">VISUALIZAR TABELA ATUALIZADA</a></left>
+    <br/>
     <center><a href="index.html">INÍCIO</a></center>
 </body>
 

@@ -9,9 +9,9 @@ if (isset($_POST['cadastrar'])) {
     $query = mysqli_query($conn, "INSERT INTO Aluno (CPF, nome) VALUES ('$cpf', '$nome')");
 
     if ($query) {
-        echo "Sucesso";
+        echo "INSERT Sucesso";
     } else {
-        echo "Erro";
+        echo "INSERT Erro";
     }
 }
 ?>
