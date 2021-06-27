@@ -1,7 +1,7 @@
 <?php
-$servidor = 'mysql742.umbler.com';
-$usuario = 'mateus';
-$senha = 'kHDH9V44rwJL53M';
-$banco = 'bdacademico';
+$servidor = '127.0.0.1';
+$usuario = 'root';
+$senha = '';
+$banco = 'bd-academico';
 
 $con = mysqli_connect($servidor, $usuario, $senha, $banco) or die ("Erro ao conectar no Banco de Dados");

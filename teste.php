@@ -1,4 +1,4 @@
-<?php include("conexaoBD.php"); ?>
+<?php include("connectbd.php"); ?>
 <html>
     <head>
         <meta charset="UTF-8" />
