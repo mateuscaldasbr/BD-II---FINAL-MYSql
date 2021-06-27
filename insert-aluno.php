@@ -34,7 +34,6 @@ if (isset($_POST['cadastrar'])) {
         <select>
             <option>Aluno</option>
             <option>Professor</option>
-            <option>BETA</option>
         </select> <button name="cadastrar">CADASTRAR</button>
     </form>
 
