@@ -21,6 +21,7 @@
                 <th>#</th>
                 <th>Nome</th>
                 <th>CPF</th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
@@ -34,11 +35,14 @@
                     <td><?php echo $linha['matricula']; ?></td>
                     <td><?php echo $linha['nome']; ?></td>
                     <td><?php echo $linha['CPF']; ?></td>
-                    <td><a href="?matricula=<?php ?>">Editar</a></td>
+                    <td><a href="update.php?matricula=<?php echo $linha['matricula']; ?>">Editar</a></td>
                 </tr>
             <?php } ?>
         </tbody>
     </table>
+
+    <center><a href="index.html">INÍCIO</a></center>
+    
 </body>
 
 </html>
