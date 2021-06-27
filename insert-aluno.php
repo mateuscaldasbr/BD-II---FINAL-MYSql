@@ -6,7 +6,7 @@ if (isset($_POST['cadastrar'])) {
     $nome = $_POST['nome'];
     $cpf = $_POST['cpf'];
 
-    $query = mysqli_query($con, "INSERT INTO Aluno (CPF, nome) VALUES ('$cpf', '$nome')");
+    $query = mysqli_query($conn, "INSERT INTO Aluno (CPF, nome) VALUES ('$cpf', '$nome')");
 
     if ($query) {
         echo "Sucesso";
@@ -38,7 +38,7 @@ if (isset($_POST['cadastrar'])) {
         </select> <button name="cadastrar">CADASTRAR</button>
     </form>
 
-    <center><a href="index.php">início</a></center>
+    <center><a href="index.html">início</a></center>
 </body>
 
 </html>
