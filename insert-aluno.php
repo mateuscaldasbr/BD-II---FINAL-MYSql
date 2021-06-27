@@ -1,5 +1,5 @@
 <?php
-include('conexaoBD.php');
+include('connectbd.php');
 
 if (isset($_POST['cadastrar'])) {
 
@@ -11,7 +11,7 @@ if (isset($_POST['cadastrar'])) {
     if ($query) {
         echo "Sucesso";
     } else {
-        echo "Erro ao inserir os dados";
+        echo "Erro";
     }
 }
 ?>
@@ -37,6 +37,8 @@ if (isset($_POST['cadastrar'])) {
             <option>BETA</option>
         </select> <button name="cadastrar">CADASTRAR</button>
     </form>
+
+    <center><a href="index.php">início</a></center>
 </body>
 
 </html>
