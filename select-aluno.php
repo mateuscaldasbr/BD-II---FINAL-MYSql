@@ -1,3 +1,16 @@
+<?php
+    include("connectbd.php");
+    if(isset($_GET['matricula'])){
+        $matricula = $_GET['matricula'];
+        $apagar = mysqli_query($conn,"DELETE FROM aluno WHERE matricula = '$matricula'");
+        if ($apagar){
+            echo 'DELETE sucesso';
+        }
+        else echo  'DELETE erro';
+
+    }
+?>
+
 <html>
 <header>
     <style>
@@ -35,14 +48,14 @@
                     <td><?php echo $linha['matricula']; ?></td>
                     <td><?php echo $linha['nome']; ?></td>
                     <td><?php echo $linha['CPF']; ?></td>
-                    <td><a href="update.php?matricula=<?php echo $linha['matricula']; ?>">Editar</a></td>
+                    <td><a href="update.php?matricula=<?php echo $linha['matricula']; ?>">Editar</a> - <a href="?matricula=<?php echo $linha['matricula']; ?>">Eliminar</a></td>
                 </tr>
             <?php } ?>
         </tbody>
     </table>
 
     <center><a href="index.html">INÍCIO</a></center>
-    
+
 </body>
 
 </html>
