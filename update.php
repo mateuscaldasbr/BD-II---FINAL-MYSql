@@ -41,10 +41,10 @@ if (isset($_POST['atualizar'])) {
                 <label>CPF</label><br />
                 <input type="text" name="CPF" value="<?php echo $linha['CPF']; ?>"><br /><br />
 
-                <select>
+                <!--<select>
                     <option>Aluno</option>
                     <option>Professor</option>
-                </select>
+                </select>-->
                 <br /><br />
                 <button name="atualizar" value="<?php echo $matricula; ?>">ATUALIZAR</button>
             </form>

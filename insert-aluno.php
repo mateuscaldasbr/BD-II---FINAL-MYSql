@@ -31,10 +31,11 @@ if (isset($_POST['cadastrar'])) {
         <label>CPF</label> <br/>
         <input type="text" name="cpf"> <br/>
 
-        <select>
+        <!--<select>
             <option>Aluno</option>
             <option>Professor</option>
-        </select> <button name="cadastrar">CADASTRAR</button>
+        </select> --> 
+        <button name="cadastrar">CADASTRAR</button>
     </form>
 
     <center><a href="index.html">INÍCIO</a></center>
